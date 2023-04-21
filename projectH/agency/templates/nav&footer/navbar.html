@@ -1,0 +1,31 @@
+<!-------nav bar -------->
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-danger" href="#">Agency</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="/">Acceuil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'propos' %}"> A Propos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white " href="#">Contactez-nous</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <a class="nav-link text-white" href="{% url 'registre' %}"><b>Créer un Compte</b></a>
+          <a class="nav-link text-success" href="{% url 'login' %}"><b>Connexion</b></a>
+        </form>
+      </div>
+    </div>
+  </nav>

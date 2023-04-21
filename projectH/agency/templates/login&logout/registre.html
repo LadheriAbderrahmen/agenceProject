@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- formulaire sign up -->
+
+    <div class="container">
+        <div class="row mt-5 mb-5 shadow">
+            <div class="col-lg-6 shadow p-4 ">
+                <h3>Create your account</h3>
+                <form  action="" method="POST">
+                  {% csrf_token %}
+                    <div class="mb-3">
+                      <label for="exampleInputtext" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" name="name"  aria-describedby="textHelp">
+                     
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputtext" class="form-label">Lastname</label>
+                        <input type="text" class="form-control" id="lastname" name="lastname" aria-describedby="textHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">{{m}}</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" name="pass1" class="form-control" id="pass1">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                        <input type="password" name="pass2" class="form-control" id="pass2">
+                      </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create your account</button>
+                  </form>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://mydreamvoyages.tn/public/images/image/image_0.03665900-1611150767.png" class="img-fluid img-reponsive" alt="...">
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
